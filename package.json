@@ -1,0 +1,23 @@
+{
+  "name": "AP700",
+  "version": "1.0.0",
+  "description": "Discord bot inspired in Detroit Become Human",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanCamiloD1/AP700.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanCamiloD1/AP700/issues"
+  },
+  "homepage": "https://github.com/JuanCamiloD1/AP700#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0"
+  }
+}
