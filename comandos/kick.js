@@ -10,4 +10,6 @@ module.exports = (client, message, args) => {
     message.channel.send(`**${mencionado.username}**, fue expulsado del servidor, razón: ${razon}.`);
   
   }
+
+  
   
