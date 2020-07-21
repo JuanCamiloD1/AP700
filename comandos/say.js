@@ -1,10 +1,9 @@
 const Discord = require("discord.js");
 module.exports = (client, message, args) => { 
-    
       if(args[0] == "embed") { //Si la primera args es embed pasa esto...
             let texto = args.slice(1).join(" ") //Defines texto a partir de la 2da args
             if(!texto) return message.channel.send("No has escrito un mensaje"); //Si no has puesto texto te lo dice
-            const embed = new Discord.RichEmbed() //Defines embed
+            const embed = new Discord.MessageEmbed() //Defines embed
             .setDescription(texto) //Pones el texto
             .setColor("RANDOM") //Color random
             .setFooter(client.user.username, client.user.avatarURL()) //Pones el footer (opcional)
@@ -16,6 +15,7 @@ module.exports = (client, message, args) => {
             message.channel.send(texto) //Mandas el mensaje
             message.delete({timeout:0})
             } //Cierras la condición del normal
+            
   }
 
  

@@ -5,7 +5,7 @@ module.exports = (client) => {
       {
         status: "online", 
         game: { 
-          name: 'Detroit Become Human', 
+          name: 'Minecraft', 
           url: null, // Establece el enlace del juego si el tipo es "STREAMING".
           type: "PLAYING"
         }
