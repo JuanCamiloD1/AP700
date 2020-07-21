@@ -2,7 +2,7 @@ const Discord = require("discord.js");
   module.exports = (client, message, args) => { 
     let userm = message.mentions.users.first()
       var user = message.author;
-        const embed = new Discord.MessageEmbed()
+        const embed = new Discord.RichEmbed()
         .setThumbnail(user.avatarURL)
         .setAuthor(user.username+'#'+user.discriminator, user.avatarURL)
         .addField('Jugando a', user.presence.game != null ? user.presence.game.name : "Nada", true)

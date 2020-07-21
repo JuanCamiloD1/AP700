@@ -1,15 +1,16 @@
+const Discord = require("discord.js");
 module.exports = (client) => {
-  
-  function presence(){
-    client.user.setPresence({
-       status: "dnd",
-       activity: {
-          name: "ser un bot.",
-          type: "STREAMING",
-          url: "null"
-       }
-    });
- }
- 
-  
-}
+
+    client.user.setPresence( 
+      {
+        status: "online", 
+        game: { 
+          name: 'Detroit Become Human', 
+          url: null, // Establece el enlace del juego si el tipo es "STREAMING".
+          type: "PLAYING"
+        }
+      }
+    );
+
+
+  } 
