@@ -1,5 +1,5 @@
 {
-  "name": "AP700",
+  "name": "ap700",
   "version": "1.0.0",
   "description": "Discord bot inspired in Detroit Become Human",
   "main": "index.js",
@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/JuanCamiloD1/AP700#readme",
   "dependencies": {
-    "discord.js": "^11.6.4"
+    "discord.js": "^11.6.4",
+    "megadb": "^3.4.0",
+    "snekfetch": "^4.0.4"
   }
 }
