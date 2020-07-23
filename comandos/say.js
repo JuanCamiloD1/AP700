@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 module.exports = (client, message, args) => { 
-      
-      if (message.deletable) message.delete();
+if (message.deletable) message.delete();
 
         if (args.length < 0) return message.reply(`Tienes que poner un mensaje!`).then(m => m.delete(5000)); // Este es el mensaje que sale si no pones un argumento
         
@@ -17,10 +16,8 @@ module.exports = (client, message, args) => {
                 .setAuthor(message.author.username, message.author.displayAvatarURL);
 
             message.channel.send(embed);
+            client.channels.get('735233291333927022').send(embed); //Enviamos el embed (anuncio) a un canal por ID
         } else {
-            message.channel.send(args.join(" "));
+            message.channel.send(':incoming_envelope:| Mensaje Enviado' ,args.join(" "));
         }
-
-  }
-
- 
+            }
