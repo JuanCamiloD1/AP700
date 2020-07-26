@@ -1,23 +1,18 @@
 const Discord = require("discord.js");
 module.exports = (client, message, args) => { 
-if (message.deletable) message.delete();
-
-        if (args.length < 0) return message.reply(`Tienes que poner un mensaje!`).then(m => m.delete(5000)); // Este es el mensaje que sale si no pones un argumento
-        
-        const roleColor = message.guild.me.highestRole.hexColor;
-
-
-        if (args[0].toLowerCase() === "embed") { // Esto hará que si antes del mensaje contiene embed saldrá el mensaje con una richembed.
-            const embed = new Discord.RichEmbed()
-                .setDescription(args.slice(1).join(" "))
-                .setColor(roleColor === "#000000" ? "#ffffff" :  roleColor)
-                .setTimestamp()
-                .setThumbnail(client.user.displayAvatarURL)
-                .setAuthor(message.author.username, message.author.displayAvatarURL);
-
-            message.channel.send(embed);
-            client.channels.get('735233291333927022').send(embed); //Enviamos el embed (anuncio) a un canal por ID
-        } else {
-            message.channel.send(':incoming_envelope:| Mensaje Enviado' ,args.join(" "));
-        }
-            }
+let perms = message.member.hasPermission("MANAGE_GUILD"); 
+    if(!perms) return message.channel.send('X | No tienes permisos para usar este comando');
+    
+    let anuncio = args.slice(0).join(" ") 
+    if(!anuncio) return message.channel.send('X | Falta el mensaje')
+    
+    let autor = message.author;
+  
+  const embed = new Discord.RichEmbed() //Creamos un embed
+    //.setTitle('¡Un nuevo mensaje!')
+    .setDescription(anuncio) //El anuncio
+    .setColor("#2f3136")
+  client.channels.get('734864394533470244').send(embed); //Enviamos el embed (anuncio) a un canal por ID
+  //client.channels.get('735233291333927022').send('| |') //Para que mencione a los miembros con un everyone
+  message.channel.send(':incoming_envelope:| Mensaje Enviado') //Mensaje que envia al canal donde se ejecuto el comando
+}

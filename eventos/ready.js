@@ -5,9 +5,9 @@ module.exports = (client) => {
       {
         status: "online", 
         game: { 
-          name: 'Minecraft', 
+          name: 'Connor main theme', 
           url: null, // Establece el enlace del juego si el tipo es "STREAMING".
-          type: "PLAYING"
+          type: "LISTENING"
         }
       }
     );
