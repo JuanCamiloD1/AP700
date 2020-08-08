@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 module.exports = (client, message, args) => { 
+  if (message.deletable) message.delete();
 let perms = message.member.hasPermission("MANAGE_GUILD"); 
     if(!perms) return message.channel.send('X | No tienes permisos para usar este comando');
     
