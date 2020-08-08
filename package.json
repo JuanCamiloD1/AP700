@@ -2,9 +2,14 @@
   "name": "ap700",
   "version": "1.0.0",
   "description": "Discord bot inspired in Detroit Become Human",
-  "main": "index.js",
+  "main": "./index.js",
+  "engines": {
+    "node": "12.x",
+    "npm": "*"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./"
   },
   "repository": {
     "type": "git",
